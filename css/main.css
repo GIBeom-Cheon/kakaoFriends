@@ -1,0 +1,483 @@
+@charset "utf-8";
+
+#color-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+body {
+}
+.ico_friends {
+  display: block;
+  background: url(../img/ico_friends.png) no-repeat 0 0 / 700px 800px;
+  font-size: 1px;
+  color: transparent;
+  overflow: hidden;
+}
+.ico_dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 1px;
+  color: transparent;
+  overflow: hidden;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+#container {
+  max-width: 640px;
+  min-width: 270px;
+  height: 2000px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+    to bottom,
+    white 40%,
+    rgb(247, 78, 6) 70%,
+    rgb(243, 78, 78)
+  );
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 640px;
+  min-width: 270px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  line-height: 46px;
+  height: 46px;
+}
+h1 a {
+  display: inline-block;
+  width: 147px;
+  height: 24px;
+  background-image: url(../img/logo_kakaofriends.png);
+  background-size: 147px 24px;
+}
+h1 a span {
+  display: none;
+}
+
+.top_left .ico_gnb_menu {
+  width: 24px;
+  height: 24px;
+  background-position: -520px -60px;
+}
+
+.top_left,
+.top_right {
+  position: absolute;
+  top: 6px;
+}
+
+.top_left {
+  left: 12px;
+}
+.top_left > button {
+  padding: 5px;
+}
+.top_left .ico_dot {
+  position: absolute;
+  top: 5px;
+  right: 1px;
+}
+.top_right {
+  right: 12px;
+}
+.top_right > button {
+  padding: 5px;
+}
+.top_right .ico_search,
+.top_right .ico_global {
+  width: 24px;
+  height: 24px;
+}
+.top_right .ico_search {
+  background-position: -40px -20px;
+}
+.top_right .ico_global {
+  background-position: -440px -60px;
+}
+
+nav {
+  border-bottom: 1px solid #ccc;
+}
+.list_tab {
+  display: flex;
+}
+.list_tab li {
+  flex: 1;
+  text-align: center;
+}
+nav .ico_dot {
+  position: absolute;
+  top: -10px;
+  right: 0px;
+}
+.list_tab li a {
+  display: block;
+  line-height: 43px;
+}
+.list_tab li a > span {
+  position: relative;
+}
+.list_tab li a.on {
+  font-weight: bold;
+}
+.on::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: black;
+  position: relative;
+  bottom: -1px;
+}
+
+/********************
+        MAIN
+********************/
+main {
+  padding-top: 95px;
+}
+article {
+}
+article .box {
+  padding: 20px;
+}
+.article_header {
+  margin-bottom: 15px;
+}
+.article_header .profile {
+  float: left;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../img/character/chunsic.png") no-repeat 0 0 / 40px 40px;
+  font-size: 1px;
+  color: transparent;
+  text-indent: -999px; /*들여쓰기 화면 밖으로*/
+  border-radius: 10px;
+}
+.article_header .info {
+  padding-left: 50px;
+}
+.article_header .info strong {
+}
+.article_header .info .txt_time {
+  font-size: 12px;
+  color: #808080;
+  display: block;
+  line-height: 1.3;
+}
+.article_con {
+}
+.article_con img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* gnb  */
+
+.dark {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+#gnb {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: -304px;
+  bottom: 0;
+  width: 304px;
+  background: #fff;
+  overflow: hidden;
+  z-index: 150;
+}
+#gnb .inner {
+  width: 304px;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box;
+}
+.info_user {
+  padding: 35px 6px 24px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.info_login {
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+.info_inquire {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+.info_user .ico_arrow_right {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-position: -320px 0;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+.list_menu {
+  padding: 20px 0;
+}
+.list_menu > li {
+}
+.list_menu .btn_menu {
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  padding: 0 10px 0 24px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.line::after {
+  display: block;
+  content: "";
+  height: 16px;
+  width: 304px;
+  margin: 16px 0;
+  border-bottom: 1px solid #808080;
+}
+
+.list_menu .ico_dot {
+  position: relative;
+  bottom: 12px;
+}
+.list_menu .ico_arrow {
+  float: right;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-position: -360px 0px;
+  vertical-align: top;
+  margin-top: 16px;
+}
+.list_menu .on {
+  background-position: -340px 0px;
+}
+
+.list_sub_wrap {
+  display: none;
+}
+.list_character {
+  padding: 16px 0 16px 14px;
+  font-size: 0; /* 자식요소 inline-block 사용시 여백을 막아주는 방법*/
+}
+.list_character li {
+  width: 25%;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.list_character li a {
+  display: block;
+  padding: 0 10px;
+  color: #6d6d6d;
+}
+
+.img_character {
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  background: no-repeat 50% 50% / cover;
+  border-radius: 50%;
+}
+.txt_character {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: normal;
+  padding-top: 8px;
+}
+.character01 .img_character {
+  background-image: url("../img/character/1.png");
+}
+
+.character02 .img_character {
+  background-image: url("../img/character/2.png");
+}
+.character03 .img_character {
+  background-image: url("../img/character/3.png");
+}
+.character04 .img_character {
+  background-image: url("../img/character/4.png");
+}
+.character05 .img_character {
+  background-image: url("../img/character/5.png");
+}
+.character06 .img_character {
+  background-image: url("../img/character/6.png");
+}
+.character07 .img_character {
+  background-image: url("../img/character/71.png");
+}
+.character08 .img_character {
+  background-image: url("../img/character/8.png");
+}
+
+/* 캐릭터 호버 */
+
+.character01:hover .img_character {
+  background-image: url("../img/character/11.png");
+}
+
+.character02:hover .img_character {
+  background-image: url("../img/character/21.png");
+}
+.character03:hover .img_character {
+  background-image: url("../img/character/31.png");
+}
+.character04:hover .img_character {
+  background-image: url("../img/character/41.png");
+}
+.character05:hover .img_character {
+  background-image: url("../img/character/51.png");
+}
+.character06:hover .img_character {
+  background-image: url("../img/character/61.png");
+}
+.character07:hover .img_character {
+  background-image: url("../img/character/7.png");
+}
+.character08:hover .img_character {
+  background-image: url("../img/character/81.jpg");
+}
+
+/* 
+    카테고리 wrap
+*/
+
+.list_category {
+  font-size: 0;
+  padding: 8px 10px 8px 24px;
+}
+
+.list_category li {
+  display: inline-block;
+  width: 50%;
+}
+.list_category li a {
+  display: block;
+  font-size: 14px;
+  color: #808080;
+  padding-top: 20px;
+}
+
+/* 
+banner
+*/
+
+.banner a {
+  display: block;
+  padding: 0 10px 16px 24px;
+}
+.banner img {
+  width: 100%;
+}
+
+.login {
+  margin-bottom: 30px;
+}
+.login .ico_gnb_lock {
+  display: inline-block;
+  background-position: -560px -20px;
+  height: 24px;
+  width: 24px;
+  vertical-align: top;
+  margin-top: -2px;
+}
+
+.login a {
+  display: block;
+  text-align: center;
+  padding: 25px;
+  color: #6d6d6d;
+  font-size: 13px;
+}
+
+/* 
+popup
+ */
+
+.login_popup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 310px;
+  background: #fff;
+  border-radius: 16px;
+  text-align: center;
+  padding: 45px;
+  z-index: 110;
+
+  cursor: pointer;
+}
+.login_popup img {
+  width: 220px;
+}
+.login_popup strong {
+  display: block;
+  margin-top: 10px;
+}
+.login_popup p {
+  font-size: 14px;
+}
+.login_popup button.btn_kakao {
+  background-color: gold;
+  width: 100%;
+  padding: 10px;
+  border-radius: 50px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.login_popup .ico_kakao {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-position: -480px -20px;
+  vertical-align: top;
+  margin-top: -2px 3px 0 0;
+}
+
+.btn_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.ico_close {
+  width: 24px;
+  height: 24px;
+  background-position: 0px -20px;
+}
